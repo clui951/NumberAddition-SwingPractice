@@ -49,6 +49,11 @@ public class NumberAdditionUI extends javax.swing.JFrame {
         jLabel3.setText("Result:");
 
         jButton2.setText("Add");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Clear");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -143,6 +148,13 @@ public class NumberAdditionUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        float num1 = Float.parseFloat(jTextField1.getText());
+        float num2 = Float.parseFloat(jTextField2.getText());
+        float result = num1 + num2;
+        jTextField3.setText(String.valueOf(result));
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
